@@ -1,0 +1,41 @@
+﻿@using MVC.Models
+@model SimpleInterestModel
+
+<form method="post">
+    <h1>Simple Interest Calculator</h1>
+
+    <div class="row mt-4">
+        <h2 class="col-sm-5">Principle Amount  :</h2>
+        <input type="number" asp-for="PrincipleAmount" />
+    </div>
+    <div class="row mt-4">
+        <h2 class="col-sm-5">Rate of Interest  :</h2>
+        <input type="number" asp-for="RateOfInterest" />
+    </div>
+    <div class="row mt-4">
+        <h2 class="col-sm-5">Years of Investment  :</h2>
+        <input type="number" asp-for="YearsOfInvestment" />
+    </div>
+    <div class="row mt-4">
+        <button type="submit">Calculate</button>
+    </div>
+</form>
+
+<h1>Calculated Value</h1>
+
+<div class="row mt-4">
+    <h2 class="col-sm-5">Principle Amount  :</h2>
+    <h2 class="col-sm-3">@Model.PrincipleAmount</h2>
+</div>
+<div class="row mt-4">
+    <h2 class="col-sm-5">Rate of Interest  :</h2>
+    <h2 class="col-sm-3">@Model.RateOfInterest</h2>
+</div>
+<div class="row mt-4">
+    <h2 class="col-sm-5">Years of Investment  :</h2>
+    <h2 class="col-sm-3">@Model.YearsOfInvestment</h2>
+</div>
+<div class="row mt-4">
+    <h2 class="col-sm-5"> Simple Interest Amount :</h2>
+    <h2 class="col-sm-3">@Model.SimpleInterest</h2>
+</div>
