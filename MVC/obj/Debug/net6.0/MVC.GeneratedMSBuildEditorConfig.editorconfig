@@ -16,6 +16,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = E:\Apps\Practices\sample programs\MVC\MVC
 build_property._RazorSourceGeneratorDebug = 
 
+[E:/Apps/Practices/sample programs/MVC/MVC/Views/Depreciation/Calculate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwcmVjaWF0aW9uXENhbGN1bGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Apps/Practices/sample programs/MVC/MVC/Views/Depreciation/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwcmVjaWF0aW9uXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/Apps/Practices/sample programs/MVC/MVC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

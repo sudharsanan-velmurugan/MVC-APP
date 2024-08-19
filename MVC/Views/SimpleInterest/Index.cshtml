@@ -2,40 +2,60 @@
 @model SimpleInterestModel
 
 <form method="post">
-    <h1>Simple Interest Calculator</h1>
+
+    @{
+        if (ViewBag.ErrorMessage != null)
+        {
+            <strong class="text-danger">@ViewBag.ErrorMessage</strong>
+        }
+    }
+
+    <h2 >Simple Interest Calculator</h2>
 
     <div class="row mt-4">
-        <h2 class="col-sm-5">Principle Amount  :</h2>
-        <input type="number" asp-for="PrincipleAmount" />
+        <div class="col-sm-3">
+            Principle Amount  :
+        </div>
+        <div class="col-sm-3">
+            <input type="number" asp-for="PrincipleAmount" />
+        </div>
     </div>
     <div class="row mt-4">
-        <h2 class="col-sm-5">Rate of Interest  :</h2>
-        <input type="number" asp-for="RateOfInterest" />
+        <div class="col-sm-3">
+            Rate of Interest  :
+        </div>
+        <div class="col-sm-3">
+            <input type="number" asp-for="RateOfInterest" />
+        </div>
     </div>
     <div class="row mt-4">
-        <h2 class="col-sm-5">Years of Investment  :</h2>
-        <input type="number" asp-for="YearsOfInvestment" />
+        <div class="col-sm-3">
+            Years of Investment  :
+        </div>
+        <div class="col-sm-3">
+            <input type="number" asp-for="YearsOfInvestment" />
+        </div>
     </div>
-    <div class="row mt-4">
-        <button type="submit">Calculate</button>
-    </div>
+   
+    <button class="mt-4 m-lg-4 mb-2 btn btn-primary" type="submit">Calculate</button>
+
 </form>
 
-<h1>Calculated Value</h1>
+<h2 class="mt-2">Calculated Value</h2>
 
-<div class="row mt-4">
-    <h2 class="col-sm-5">Principle Amount  :</h2>
-    <h2 class="col-sm-3">@Model.PrincipleAmount</h2>
-</div>
-<div class="row mt-4">
-    <h2 class="col-sm-5">Rate of Interest  :</h2>
-    <h2 class="col-sm-3">@Model.RateOfInterest</h2>
-</div>
-<div class="row mt-4">
-    <h2 class="col-sm-5">Years of Investment  :</h2>
-    <h2 class="col-sm-3">@Model.YearsOfInvestment</h2>
-</div>
-<div class="row mt-4">
-    <h2 class="col-sm-5"> Simple Interest Amount :</h2>
-    <h2 class="col-sm-3">@Model.SimpleInterest</h2>
-</div>
+    <div class="row mt-4">
+        <div class="col-sm-3">Principle Amount  :</div>
+        <div class="col-sm-3">@Model.PrincipleAmount</div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-sm-3">Rate of Interest  :</div>
+        <div class="col-sm-3">@Model.RateOfInterest</div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-sm-3">Years of Investment  :</div>
+        <div class="col-sm-3">@Model.YearsOfInvestment</div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-sm-3"> Simple Interest Amount :</div>
+        <div class="col-sm-3">@Model.SimpleInterest</div>
+    </div>

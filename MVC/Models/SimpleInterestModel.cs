@@ -11,6 +11,18 @@ namespace MVC.Models
         
         public SimpleInterestModel() { }
         public void SimpleIntersest() {
+            if (PrincipleAmount == null)
+            {
+               throw new Exception("Enter the Principle Amount");
+            } 
+            if (RateOfInterest == null)
+            {
+               throw new Exception("Enter the Rate Of Interest");
+            } 
+            if (YearsOfInvestment == null)
+            {
+               throw new Exception("Enter the Years Of Investment");
+            }
             SimpleInterest = (PrincipleAmount * RateOfInterest * YearsOfInvestment) / 100;
         }
     }

@@ -1,0 +1,43 @@
+﻿@using MVC.Models
+@model DepreciationModel
+
+<form method="post">
+
+    <h2>Depreciation Value</h2>
+
+    <div class="row mt-4">
+        <div class="col-sm-3">
+            Purchase value  :
+        </div>
+        <div class="col-sm-3">
+            @Model.PurchaseValue;
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-sm-3">
+            Years of service  :
+        </div>
+        <div class="col-sm-3">
+           @Model.YearsOfService
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-sm-3">
+            Depreciated Value  :
+        </div>
+        <div class="col-sm-3">
+            @Model.DepreciationAmount
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-sm-3">
+            Salvage Value  :
+        </div>
+        <div class="col-sm-3">
+            @Model.SalvageValue
+        </div>
+    </div>
+
+    <a asp-action="index" asp-controller="Depreciation" class="mt-4 m-lg-4 mb-2 btn btn-primary" type="button">Try again</a>
+
+</form>

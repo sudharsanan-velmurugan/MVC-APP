@@ -7,17 +7,17 @@ namespace MVC.Controllers
     {
         public IActionResult Index(SimpleInterestModel? si=null)
         {
-            if(si==null)
+            try
             {
-                si = new SimpleInterestModel()
-                {
-                    PrincipleAmount = 5000000,
-                    RateOfInterest = 16,
-                    YearsOfInvestment = 4,
-                };
+                if (si == null)
+                    si = new SimpleInterestModel();
+                   
+                si.SimpleIntersest();
             }
-            
-            si.SimpleIntersest();
+            catch (Exception ex)
+            {
+                ViewBag.ErrorMessage = ex.Message;              
+            }
 
             return View(si);
         }
